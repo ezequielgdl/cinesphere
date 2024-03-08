@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CineSphere - Movie Database App
 
-## Getting Started
+This project is a movie database web application built with Next.js and ShadCN UI. It allows users to browse different lists of movies, search for specific movies using the TMDB API, and view detailed information about each movie.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js**
+- **ShadCN UI**
+- **Themoviedb.org API**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Homepage**: Users can view various lists of movies fetched from different endpoints of the TMDB API.
+- **Search**: Users can search for movies using the search function, which queries the TMDB database and displays matching results.
+- **Movie Details**: Detailed information about each movie, including title, overview, release date, genres, and average rating, is displayed on individual movie detail pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Future Developments
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- ## Authentication: Implement user authentication to allow users to create accounts, save their watched films, and create new lists and reviews of movies.
+- ## Responsive Design: Implement responsivity and accessiblility across different devices and screen sizes.
+- ## User Profiles: Create user profiles where users can manage their saved movies, lists, and reviews.
+- ## Social Features: Add social features such as following other users, sharing movie lists, and liking or commenting on reviews.
+- ## Personalization: Provide personalized recommendations based on users' viewing history and preferences.
+- ## Enhanced Search: Improve the search functionality with advanced filters and suggestions.
+- ## Localization: Support multiple languages and regions to make the app accessible to a global audience.
+- ## Community Engagement: Foster a community around the app with forums, discussion boards, and events related to movies and entertainment.
+- ## Accessibility: Ensure the app is accessible to users with disabilities by adhering to accessibility standards and guidelines.
+- ## Performance Optimization: Continuously optimize the app's performance to ensure fast loading times and smooth user experience, especially for users with slower internet connections or older devices.
