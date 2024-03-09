@@ -61,7 +61,7 @@ const renderStarIcons = (voteAverage) => {
 
 const AverageRating = ({ details }) => {
   return (
-    <div className="w-1/4 flex justify-center pt-4">
+    <div className="w-1/4 flex justify-center">
       <div>
         <h3 className="tabs">Average Rating</h3>
         <Separator />

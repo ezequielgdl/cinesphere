@@ -1,19 +1,13 @@
 import React from "react";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import MainMovieDetails from "@/components/MainMovieDetails";
 import CastTabsContent from "@/components/tabs/CastTabsContent";
 import ReviewTabsContent from "@/components/tabs/ReviewTabsContent";
 import CrewTabsContent from "@/components/tabs/CrewTabsContent";
 import DetailsTabsContent from "@/components/tabs/DetailsTabsContent";
 import GenresTabsContent from "@/components/tabs/GenresTabsContent";
+import MobileMainMovieDetails from "@/components/MobileMainMovieDetails";
 
 const getMovieById = async (id) => {
   const apiKey = process.env.MOVIEDB_AUTH;
@@ -77,7 +71,7 @@ const MovieDetails = async ({ params }) => {
   const baseUrl = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <div className="min-h-screen mx-32">
+    <div className="min-h-screen md:mx-32">
       <MainMovieDetails
         director={director}
         details={details}

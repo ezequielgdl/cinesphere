@@ -61,7 +61,7 @@
     @apply text-5xl font-bold;
   }
   h2 {
-    @apply font-sans;
+    @apply font-sans text-[16px];
   }
   .tag {
     @apply font-sans text-xs;
