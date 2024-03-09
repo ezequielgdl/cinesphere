@@ -18,15 +18,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={lora.className}
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+        // style={{
+        //   minHeight: "100vh",
+        //   display: "flex",
+        //   flexDirection: "column",
+        //   alignItems: "center",
+        //   width: "90vw",
+        // }}
       >
         <NavBar />
-        <div style={{ flex: "1", maxWidth: "90vw" }}>{children}</div>
+        <div>{children}</div>
         <Footer />
       </body>
     </html>

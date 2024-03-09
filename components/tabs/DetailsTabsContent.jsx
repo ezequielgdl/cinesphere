@@ -5,7 +5,7 @@ import { Badge } from "../ui/badge";
 const DetailsTabsContent = ({ details }) => {
   return (
     <TabsContent value="details">
-      <div className="flex items-center mb-2">
+      <div className="flex flex-wrap items-center w-full mb-2">
         <p className="tag">Studio:</p>
         {details.production_companies.map((company) => {
           return (

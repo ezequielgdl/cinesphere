@@ -5,11 +5,11 @@ import AverageRating from "./AverageRating";
 const MainMovieDetails = ({ details, director, year }) => {
   const baseUrl = "https://image.tmdb.org/t/p/w500";
   return (
-    <div className="flex md:flex-row flex-col justify-between h:1/4 sm:h-1/2 p-6 md:space-x-6 items-center md:items-start">
+    <div className="flex md:flex-row flex-col justify-between mb-4 h:1/4 sm:h-1/2 md:space-x-6 items-center md:items-start">
       <div className="w-1/4 flex justify-center items-center">
         {details.poster_path ? (
           <img
-            className="rounded-lg"
+            className="rounded-lg border"
             src={baseUrl + details.poster_path}
             alt="movie poster"
           />

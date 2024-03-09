@@ -11,7 +11,7 @@ const ReviewTabsContent = ({ reviews }) => {
       {reviews.length > 0 ? (
         reviews.map((review) => {
           return (
-            <div className="space-y-6 mb-6" key={review.id}>
+            <div className="space-y-6 w-full mb-6" key={review.id}>
               <div className="flex space-x-3 items-center">
                 <Avatar>
                   <AvatarImage
@@ -29,7 +29,9 @@ const ReviewTabsContent = ({ reviews }) => {
                   </em>
                 </span>
               </div>
-              <p className="m-1 tracking-wide">{review.content}</p>
+              <p className="m-1 overflow-hidden tracking-wide">
+                {review.content}
+              </p>
               <Separator />
             </div>
           );

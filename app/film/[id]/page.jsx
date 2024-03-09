@@ -1,13 +1,12 @@
 import React from "react";
 import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import MainMovieDetails from "@/components/MainMovieDetails";
 import CastTabsContent from "@/components/tabs/CastTabsContent";
 import ReviewTabsContent from "@/components/tabs/ReviewTabsContent";
 import CrewTabsContent from "@/components/tabs/CrewTabsContent";
 import DetailsTabsContent from "@/components/tabs/DetailsTabsContent";
 import GenresTabsContent from "@/components/tabs/GenresTabsContent";
-import MobileMainMovieDetails from "@/components/MobileMainMovieDetails";
 
 const getMovieById = async (id) => {
   const apiKey = process.env.MOVIEDB_AUTH;
@@ -71,29 +70,27 @@ const MovieDetails = async ({ params }) => {
   const baseUrl = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <div className="min-h-screen md:mx-32">
+    <div className="min-h-screen mx-6 md:mx-32">
       <MainMovieDetails
         director={director}
         details={details}
         year={year}
       ></MainMovieDetails>
       <Separator />
-      <div>
-        <Tabs defaultValue="reviews" className="p-6">
-          <TabsList className="h-full mb-6 tabs">
+      <div className="mt-6 w-full">
+        <Tabs defaultValue="reviews">
+          <TabsList className="h-full w-full mb-6 tabs">
             <TabsTrigger value="reviews">Reviews</TabsTrigger>
             <TabsTrigger value="cast">Cast</TabsTrigger>
             <TabsTrigger value="crew">Crew</TabsTrigger>
             <TabsTrigger value="details">Details</TabsTrigger>
             <TabsTrigger value="genre">Genres</TabsTrigger>
           </TabsList>
-          <div>
-            <ReviewTabsContent reviews={reviews} />
-            <CastTabsContent cast={cast} />
-            <CrewTabsContent crew={crew} />
-            <DetailsTabsContent details={details} />
-            <GenresTabsContent genres={genres} />
-          </div>
+          <ReviewTabsContent reviews={reviews} />
+          <CastTabsContent cast={cast} />
+          <CrewTabsContent crew={crew} />
+          <DetailsTabsContent details={details} />
+          <GenresTabsContent genres={genres} />
         </Tabs>
       </div>
     </div>
