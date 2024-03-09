@@ -1,7 +1,7 @@
 import { Inter, Lora } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import SearchInput from "@/components/SearchInput";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -16,26 +16,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={lora.className}>
-        <nav className="flex justify-around w-full bg-black h-14 text-white">
-          <Link href="/">
-            <img
-              src="/cinesphere_logo.svg"
-              className="pl-6 h-full w-auto"
-            ></img>
-          </Link>
-          <SearchInput />
-        </nav>
-        {children}
-        <footer className="w-full p-5 text-center bg-black h-14 text-white tabs">
-          Created by{" "}
-          <a
-            href="https://github.com/ezequielgdl"
-            className="hover:text-primary"
-          >
-            Ezequiel Gómez de Lima
-          </a>{" "}
-        </footer>
+      <body
+        className={lora.className}
+        style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+      >
+        <NavBar />
+        <div style={{ flex: "1" }}>{children}</div>
+        <Footer />
       </body>
     </html>
   );

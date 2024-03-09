@@ -18,16 +18,16 @@ const SearchInput = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex w-full max-w-sm items-center space-x-2"
+      className="flex max-w-sm items-center space-x-2"
     >
       <Input
         type="text"
         placeholder="search..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="bg-black tabs"
+        className="bg-black tabs sm:h-[70%] h-[50%]"
       />
-      <Button type="submit">
+      <Button type="submit" size="icon" className="h-8">
         <MagnifyingGlassIcon></MagnifyingGlassIcon>
       </Button>
     </form>

@@ -36,7 +36,7 @@ const MovieCarousel = async ({ url, title }) => {
 
   return (
     <>
-      <Carousel className="w-full max-w-4xl my-6">
+      <Carousel className="w-screen md:max-w-4xl my-6 px-5">
         <h3 className="tabs font-semibold">{title.toUpperCase()}</h3>
         <Separator className="mb-4" />
         <CarouselContent className="-ml-1">

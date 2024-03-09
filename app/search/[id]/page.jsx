@@ -31,9 +31,15 @@ const SearchResults = async ({ params }) => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="my-4 tabs">
-        Results for <em>{query.replaceAll("%20", " ")}</em>
-      </div>
+      {results.length > 0 ? (
+        <div className="my-4 tabs">
+          Results for <em>{query.replaceAll("%20", " ")}</em>
+        </div>
+      ) : (
+        <div className="my-4 tabs">
+          No results for <em>{query.replaceAll("%20", " ")}</em>
+        </div>
+      )}
       <div className="grid grid-cols-4 gap-8 mx-32 mb-6">
         {results.map((movie) => {
           return <MovieCard key={movie.id} movie={movie}></MovieCard>;
