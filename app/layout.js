@@ -22,10 +22,11 @@ export default function RootLayout({ children }) {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
+          alignItems: "center",
         }}
       >
         <NavBar />
-        <div style={{ flex: "1" }}>{children}</div>
+        <div style={{ flex: "1", maxWidth: "90vw" }}>{children}</div>
         <Footer />
       </body>
     </html>

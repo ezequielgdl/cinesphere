@@ -35,13 +35,16 @@ const MovieCarousel = async ({ url, title }) => {
   const baseUrl = "https://image.tmdb.org/t/p/w300/";
 
   return (
-    <>
-      <Carousel className="w-screen md:max-w-4xl my-6 px-5">
+    <div className="max-w-[90%]">
+      <Carousel className="my-6">
         <h3 className="tabs font-semibold">{title.toUpperCase()}</h3>
         <Separator className="mb-4" />
         <CarouselContent className="-ml-1">
           {movies.map((movie) => (
-            <CarouselItem className="pl-2 basis-1/6" key={movie.id}>
+            <CarouselItem
+              className="pl-2 basis-1/4 md:basis-1/6"
+              key={movie.id}
+            >
               <div className="rounded-sm border overflow-hidden hover:border-2 hover:border-primary">
                 <Link href={`/film/${movie.id}`}>
                   <img
@@ -54,10 +57,10 @@ const MovieCarousel = async ({ url, title }) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="md:inline-flex hidden" />
+        <CarouselNext className="md:inline-flex hidden" />
       </Carousel>
-    </>
+    </div>
   );
 };
 
