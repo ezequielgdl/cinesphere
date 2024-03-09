@@ -5,7 +5,7 @@ import { Badge } from "../ui/badge";
 const GenresTabsContent = ({ genres }) => {
   return (
     <TabsContent value="genre">
-      {genres > 0 ? (
+      {genres.length > 0 ? (
         genres.map((genre) => {
           return (
             <Badge key={genre.id} className="m-1 tabs">

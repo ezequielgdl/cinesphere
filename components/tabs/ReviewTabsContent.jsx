@@ -29,7 +29,7 @@ const ReviewTabsContent = ({ reviews }) => {
                   </em>
                 </span>
               </div>
-              <p className="m-1 text-sm">{review.content}</p>
+              <p className="m-1 tracking-wide">{review.content}</p>
               <Separator />
             </div>
           );

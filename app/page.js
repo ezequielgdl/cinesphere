@@ -1,8 +1,33 @@
 import Carousel from "@/components/Carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import SearchInput from "@/components/SearchInput";
+import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center md:min-h-screen">
+      <Dialog>
+        <DialogTrigger>
+          <Badge className="tabs">
+            <MagnifyingGlassIcon />
+            Search
+          </Badge>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Search for a movie</DialogTitle>
+          </DialogHeader>
+          <SearchInput />
+        </DialogContent>
+      </Dialog>
       <Carousel
         url={"https://api.themoviedb.org/3/trending/movie/week?language=en-US"}
         title="Trending This Week"

@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import SearchInput from "./SearchInput";
 
 const NavBar = () => {
   return (
@@ -8,7 +7,6 @@ const NavBar = () => {
       <Link href="/">
         <img src="/cinesphere_logo.svg" className="h-12 w-auto sm:w-64"></img>
       </Link>
-      <SearchInput />
     </nav>
   );
 };

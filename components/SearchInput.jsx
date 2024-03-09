@@ -22,7 +22,7 @@ const SearchInput = () => {
     >
       <Input
         type="text"
-        placeholder="search..."
+        placeholder="The Godfather II"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className="bg-black tabs sm:h-[70%] h-[50%]"
