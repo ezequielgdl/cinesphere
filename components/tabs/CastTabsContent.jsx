@@ -8,7 +8,7 @@ const CastTabsContent = ({ cast }) => {
       {cast.length > 0 ? (
         cast.map((member) => {
           return (
-            <Badge className="m-1 tabs" key={member.id}>
+            <Badge className="m-1 tabs" key={member.id + "cast"}>
               {member.name}
             </Badge>
           );

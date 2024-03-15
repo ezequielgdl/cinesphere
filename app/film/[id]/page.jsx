@@ -79,12 +79,37 @@ const MovieDetails = async ({ params }) => {
       <Separator />
       <div className="mt-6 w-full">
         <Tabs defaultValue="reviews">
-          <TabsList className="h-full w-full mb-6 tabs">
-            <TabsTrigger value="reviews">Reviews</TabsTrigger>
-            <TabsTrigger value="cast">Cast</TabsTrigger>
-            <TabsTrigger value="crew">Crew</TabsTrigger>
-            <TabsTrigger value="details">Details</TabsTrigger>
-            <TabsTrigger value="genre">Genres</TabsTrigger>
+          <TabsList className="h-full mb-6 tabs">
+            <TabsTrigger
+              className="text-xs p-2 md:text-sm md:.p-1"
+              value="reviews"
+            >
+              Reviews
+            </TabsTrigger>
+            <TabsTrigger
+              className="text-xs p-2 md:text-sm md:.p-1"
+              value="cast"
+            >
+              Cast
+            </TabsTrigger>
+            <TabsTrigger
+              className="text-xs p-2 md:text-sm md:.p-1"
+              value="crew"
+            >
+              Crew
+            </TabsTrigger>
+            <TabsTrigger
+              className="text-xs p-2 md:text-sm md:.p-1"
+              value="details"
+            >
+              Details
+            </TabsTrigger>
+            <TabsTrigger
+              className="text-xs p-2 md:text-sm md:.p-1"
+              value="genre"
+            >
+              Genres
+            </TabsTrigger>
           </TabsList>
           <ReviewTabsContent reviews={reviews} />
           <CastTabsContent cast={cast} />

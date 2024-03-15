@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center md:min-h-screen">
+    <main className="flex flex-col items-center md:min-h-screen md:px-3">
       <Dialog>
         <DialogTrigger>
           <Badge className="tabs">

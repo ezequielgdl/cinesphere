@@ -8,7 +8,7 @@ const GenresTabsContent = ({ genres }) => {
       {genres.length > 0 ? (
         genres.map((genre) => {
           return (
-            <Badge key={genre.id} className="m-1 tabs">
+            <Badge key={genre.id + "genre"} className="m-1 tabs">
               {genre.name}
             </Badge>
           );

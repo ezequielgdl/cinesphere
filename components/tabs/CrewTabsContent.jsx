@@ -11,13 +11,13 @@ const CrewTabsContent = ({ crew }) => {
   return (
     <TabsContent value="crew" className="tabs">
       {crew.length > 0 ? (
-        crew.map((member) => {
+        crew.map((member, i) => {
           return (
-            <HoverCard key={member.id}>
+            <HoverCard key={i}>
               <HoverCardTrigger>
                 <Badge className="m-1">{member.name}</Badge>
               </HoverCardTrigger>
-              <HoverCardContent key={member.id}>{member.job}</HoverCardContent>
+              <HoverCardContent>{member.job}</HoverCardContent>
             </HoverCard>
           );
         })

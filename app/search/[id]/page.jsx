@@ -40,7 +40,7 @@ const SearchResults = async ({ params }) => {
           No results for <em>{query.replaceAll("%20", " ")}</em>
         </div>
       )}
-      <div className="grid grid-cols-4 gap-8 mx-32 mb-6">
+      <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 sm:gap-8 mx-6 sm:mx-32 mb-6">
         {results.map((movie) => {
           return <MovieCard key={movie.id} movie={movie}></MovieCard>;
         })}
