@@ -2,6 +2,8 @@ import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -27,7 +29,9 @@ export default function RootLayout({ children }) {
         // }}
       >
         <NavBar />
-        <div>{children}</div>
+        <Suspense fallback={<Loading />}>
+          <div>{children}</div>
+        </Suspense>
         <Footer />
       </body>
     </html>
